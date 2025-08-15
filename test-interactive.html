@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Test - Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .action-item {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #191919;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        
+        .action-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .calendar-widget, .budget-modal-overlay {
+            display: none;
+            background: #fff;
+            border: 2px solid #4545FE;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .budget-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .budget-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        .status {
+            background: #e8f5e8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border-left: 4px solid #28a745;
+        }
+        
+        button {
+            background: #4545FE;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        
+        button:hover {
+            background: #3333E6;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 Interactive Dashboard Test</h1>
+        <p>This page tests the interactive functionality before integrating into the main dashboard.</p>
+        
+        <div class="status" id="status">
+            Ready to test...
+        </div>
+        
+        <h3>Test Icons:</h3>
+        <div class="action-item" data-action="notifications">🔔</div>
+        <div class="action-item" data-action="calculator">🧮</div>
+        <div class="action-item" data-action="calendar">📅</div>
+        <div class="action-item" data-action="messages">💬</div>
+    </div>
+    
+    <!-- Calendar Widget (Hidden) -->
+    <div class="calendar-widget" id="calendarWidget">
+        <h3>📅 Calendar Component</h3>
+        <p>November 2023 Calendar would appear here</p>
+        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin: 20px 0;">
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">S</div>
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">M</div>
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">T</div>
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">W</div>
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">T</div>
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">F</div>
+            <div style="background: #f0f0f0; padding: 10px; text-align: center;">S</div>
+            
+            <!-- Sample dates -->
+            <div style="background: #e8e8e8; padding: 10px; text-align: center;">29</div>
+            <div style="background: #e8e8e8; padding: 10px; text-align: center;">30</div>
+            <div style="background: #e8e8e8; padding: 10px; text-align: center;">31</div>
+            <div style="background: #fff; padding: 10px; text-align: center; border: 1px solid #ddd;">1</div>
+            <div style="background: #fff; padding: 10px; text-align: center; border: 1px solid #ddd;">2</div>
+            <div style="background: #fff; padding: 10px; text-align: center; border: 1px solid #ddd;">3</div>
+            <div style="background: #fff; padding: 10px; text-align: center; border: 1px solid #ddd;">4</div>
+        </div>
+        <button onclick="hideCalendar()">❌ Close Calendar</button>
+    </div>
+    
+    <!-- Budget Modal (Hidden) -->
+    <div class="budget-modal-overlay" id="budgetModal">
+        <div class="budget-card">
+            <h3>💰 Budget Calculator</h3>
+            <p>Budget creation interface would appear here</p>
+            <div style="background: #f8f9fa; padding: 15px; margin: 15px 0; border-radius: 6px;">
+                <h4>Features:</h4>
+                <ul>
+                    <li>Set up annual budgets by category</li>
+                    <li>Track actuals vs budget in real time</li>
+                    <li>Adjust figures and forecast with ease</li>
+                </ul>
+            </div>
+            <button onclick="createBudget()">Create Budget</button>
+            <button onclick="hideBudgetModal()">Cancel</button>
+        </div>
+    </div>
+    
+    <script>
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+            console.log('STATUS:', message);
+        }
+        
+        function showCalendar() {
+            const widget = document.getElementById('calendarWidget');
+            widget.style.display = 'block';
+            widget.scrollIntoView({ behavior: 'smooth' });
+            updateStatus('✅ Calendar opened successfully!');
+        }
+        
+        function hideCalendar() {
+            document.getElementById('calendarWidget').style.display = 'none';
+            updateStatus('📅 Calendar closed');
+        }
+        
+        function showBudgetModal() {
+            document.getElementById('budgetModal').style.display = 'flex';
+            updateStatus('✅ Budget modal opened successfully!');
+        }
+        
+        function hideBudgetModal() {
+            document.getElementById('budgetModal').style.display = 'none';
+            updateStatus('💰 Budget modal closed');
+        }
+        
+        function createBudget() {
+            updateStatus('🎉 Budget created successfully!');
+            setTimeout(() => {
+                hideBudgetModal();
+            }, 1500);
+        }
+        
+        // Initialize interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatus('🚀 Test page loaded successfully');
+            
+            // Add click handlers to action items
+            const actionItems = document.querySelectorAll('.action-item');
+            
+            actionItems.forEach((item, index) => {
+                const action = item.dataset.action;
+                
+                item.addEventListener('click', function() {
+                    updateStatus(`🖱️ Clicked: ${action}`);
+                    
+                    // Add click animation
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                    
+                    // Handle different actions
+                    switch(action) {
+                        case 'calculator':
+                            showBudgetModal();
+                            break;
+                        case 'calendar':
+                            showCalendar();
+                            break;
+                        case 'notifications':
+                            updateStatus('🔔 Notifications clicked (demo)');
+                            break;
+                        case 'messages':
+                            updateStatus('💬 Messages clicked (demo)');
+                            break;
+                        default:
+                            updateStatus(`❓ Unknown action: ${action}`);
+                    }
+                });
+                
+                // Add hover tooltips
+                item.title = action.charAt(0).toUpperCase() + action.slice(1);
+            });
+            
+            // Close modal when clicking outside
+            document.getElementById('budgetModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    hideBudgetModal();
+                }
+            });
+            
+            // ESC key to close modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (document.getElementById('budgetModal').style.display === 'flex') {
+                        hideBudgetModal();
+                    }
+                    if (document.getElementById('calendarWidget').style.display === 'block') {
+                        hideCalendar();
+                    }
+                }
+            });
+            
+            updateStatus('✅ All interactive elements initialized successfully!');
+        });
+        
+        // Test functions for debugging
+        window.testCalendar = () => {
+            updateStatus('🧪 Testing calendar functionality...');
+            showCalendar();
+        };
+        
+        window.testBudget = () => {
+            updateStatus('🧪 Testing budget modal functionality...');
+            showBudgetModal();
+        };
+        
+        console.log('🎯 Test functions available:');
+        console.log('- testCalendar() - Opens the calendar');
+        console.log('- testBudget() - Opens the budget modal');
+        console.log('- Click the icons above to test interactivity');
+    </script>
+</body>
+</html>

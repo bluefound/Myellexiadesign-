@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Test</title>
+</head>
+<body>
+    <h1>JavaScript Test Page</h1>
+    <button id="testBtn" style="padding: 10px; font-size: 16px; background: blue; color: white; border: none;">Click Me to Test JavaScript</button>
+    
+    <script>
+        console.log('🔥 JAVASCRIPT IS WORKING!');
+        alert('JavaScript loaded successfully!');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📝 DOM loaded in test page');
+            
+            const btn = document.getElementById('testBtn');
+            if (btn) {
+                console.log('✅ Button found');
+                btn.addEventListener('click', function() {
+                    console.log('🖱️ Button clicked!');
+                    alert('Button click works!');
+                    this.style.background = 'green';
+                });
+            } else {
+                console.log('❌ Button not found');
+            }
+        });
+    </script>
+</body>
+</html>

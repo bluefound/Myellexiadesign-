@@ -1,0 +1,234 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0D0D0D;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Calendar Container - Exact Figma dimensions */
+.calendar-container {
+    width: 400px;
+    height: 827px;
+    background-color: #0D0D0D;
+    position: relative;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+/* Header */
+.header {
+    width: 400px;
+    height: 50px;
+    background-color: #171717;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header-text {
+    position: absolute;
+    left: 22.75px;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.header-arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.header-title {
+    font-family: 'Euclid Circular B', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.268;
+    color: #FFFFFF;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 24px;
+    top: 12.85px;
+    width: 24px;
+    height: 24px;
+}
+
+/* Month Navigation */
+.month-navigation {
+    position: absolute;
+    left: 87px;
+    top: 67px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 226px;
+    gap: 29px;
+}
+
+.nav-arrow {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.month-title {
+    font-family: 'Euclid Circular B', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.268;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    position: absolute;
+    left: 25px;
+    top: 116.61px;
+}
+
+/* Week Header */
+.week-header {
+    display: flex;
+    flex-direction: row;
+    background-color: #121212;
+}
+
+.day-header {
+    width: 50px;
+    height: 50px;
+    background-color: #0D0D0D;
+    border: 0.47px solid #242424;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: stretch;
+    gap: 4.74px;
+    padding: 5.68px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 7.58px;
+    line-height: 1.21;
+    color: #969696;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.day-header.sun {
+    border-radius: 3.7881410121917725px 0px 0px 0px;
+}
+
+/* Week Rows */
+.week-row {
+    display: flex;
+    flex-direction: row;
+    height: 91.2px;
+    background-color: #FAFAFA;
+}
+
+.day-cell {
+    width: 50px;
+    height: 91.2px;
+    background-color: #0D0D0D;
+    border: 0.47px solid #242424;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 4.74px;
+    padding: 5.68px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 9.94px;
+    line-height: 1.21;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Current month days */
+.day-cell.current-month {
+    color: #969696;
+}
+
+/* Previous and next month days */
+.day-cell.prev-month,
+.day-cell.next-month {
+    color: rgba(187, 187, 187, 0.6);
+}
+
+/* Selected day (16th) */
+.day-cell.selected {
+    padding: 2px 8px;
+}
+
+.day-highlight {
+    background-color: #2525E6;
+    border-radius: 200px;
+    padding: 2px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 9.94px;
+    line-height: 1.21;
+    text-align: left;
+    width: fit-content;
+}
+
+/* Custom scrollbar for the container */
+.calendar-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.calendar-container::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Ensure exact layout matching Figma specifications */
+@media screen {
+    .calendar-container {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/* Font loading - fallback for Euclid Circular B */
+@font-face {
+    font-family: 'Euclid Circular B';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    /* This would typically load from a font file, using Inter as fallback */
+}
+
+/* Hover effects for interactive elements */
+.nav-arrow:hover,
+.header-arrow:hover,
+.calendar-icon:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.day-cell:hover:not(.selected) {
+    background-color: #1A1A1A;
+    transition: background-color 0.2s ease;
+}
+
+.day-cell.selected:hover .day-highlight {
+    background-color: #1E1ECC;
+    transition: background-color 0.2s ease;
+}
