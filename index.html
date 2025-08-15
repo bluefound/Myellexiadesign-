@@ -3,136 +3,741 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar - November 2023</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dashboard - Veerge</title>
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <div class="calendar-container">
+    <div class="dashboard">
+        <!-- Background -->
+        <div class="background"></div>
+        
         <!-- Header -->
-        <div class="header">
-            <div class="header-text">
-                <div class="header-arrow">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M19.5 12L5.1 12" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M4.5 5.97L12.55 12.02L4.5 18.02" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+        <header class="header">
+            <!-- Dark Header Bar -->
+            <div class="header-top">
+                <!-- Logo Section -->
+                <div class="logo-section">
+                    <div class="myxellia-logo">
+                        <img src="dashboard/icons/myxellia-logo.svg" alt="Myxellia" />
+                    </div>
                 </div>
-                <span class="header-title">Calendar</span>
-            </div>
-            <div class="calendar-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 19V8h14v11H5z" fill="white"/>
-                </svg>
-            </div>
-        </div>
-
-        <!-- Month Navigation -->
-        <div class="month-navigation">
-            <div class="nav-arrow left-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M15.82 19L8.18 11.36L15.82 5" stroke="#98A2B3" stroke-width="2"/>
-                </svg>
-            </div>
-            <h1 class="month-title">November 2023</h1>
-            <div class="nav-arrow right-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M8.18 5L15.82 12.64L8.18 19" stroke="#98A2B3" stroke-width="2"/>
-                </svg>
-            </div>
-        </div>
-
-        <!-- Calendar Grid -->
-        <div class="calendar-grid">
-            <!-- Week Headers -->
-            <div class="week-header">
-                <div class="day-header sun">SUN</div>
-                <div class="day-header">MON</div>
-                <div class="day-header">TUE</div>
-                <div class="day-header">WED</div>
-                <div class="day-header">THURS</div>
-                <div class="day-header">FRI</div>
-                <div class="day-header">SAT</div>
-            </div>
-
-            <!-- Week 1 -->
-            <div class="week-row">
-                <div class="day-cell prev-month">29</div>
-                <div class="day-cell prev-month">30</div>
-                <div class="day-cell prev-month">31</div>
-                <div class="day-cell current-month">Nov 1</div>
-                <div class="day-cell current-month">2</div>
-                <div class="day-cell current-month">3</div>
-                <div class="day-cell current-month">4</div>
-            </div>
-
-            <!-- Week 2 -->
-            <div class="week-row">
-                <div class="day-cell current-month">5</div>
-                <div class="day-cell current-month">6</div>
-                <div class="day-cell current-month">7</div>
-                <div class="day-cell current-month">8</div>
-                <div class="day-cell current-month">9</div>
-                <div class="day-cell current-month">10</div>
-                <div class="day-cell current-month">11</div>
-            </div>
-
-            <!-- Week 3 -->
-            <div class="week-row">
-                <div class="day-cell current-month">12</div>
-                <div class="day-cell current-month">13</div>
-                <div class="day-cell current-month">14</div>
-                <div class="day-cell current-month">15</div>
-                <div class="day-cell current-month selected">
-                    <div class="day-highlight">16</div>
+                
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <div class="action-items">
+                        <div class="action-item">
+                            <img src="dashboard/icons/notification.svg" alt="Notifications" />
+                        </div>
+                        <div class="action-item">
+                            <img src="dashboard/icons/calculator.svg" alt="Calculator" />
+                        </div>
+                        <div class="action-item">
+                            <img src="dashboard/icons/calendar.svg" alt="Calendar" />
+                        </div>
+                        <div class="action-item">
+                            <img src="dashboard/icons/message-notif.svg" alt="Messages" />
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="avatar">
+                            <span>D</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="day-cell current-month">17</div>
-                <div class="day-cell current-month">18</div>
             </div>
 
-            <!-- Week 4 -->
-            <div class="week-row">
-                <div class="day-cell current-month">19</div>
-                <div class="day-cell current-month">20</div>
-                <div class="day-cell current-month">21</div>
-                <div class="day-cell current-month">22</div>
-                <div class="day-cell current-month">23</div>
-                <div class="day-cell current-month">24</div>
-                <div class="day-cell current-month">25</div>
+            <!-- White Navigation Bar -->
+            <div class="header-bottom">
+                <div class="header-container">
+                    <!-- Navigation Options -->
+                    <div class="navigation-options">
+                        <div class="nav-group active">
+                            <div class="nav-item active">
+                                <div class="nav-icon">
+                                    <img src="dashboard/icons/home.svg" alt="Home" />
+                                </div>
+                                <span>Dashboard</span>
+                            </div>
+                        </div>
+                        <div class="nav-group">
+                            <div class="nav-item">
+                                <div class="nav-icon">
+                                    <img src="dashboard/icons/toolbox.svg" alt="Toolbox" />
+                                </div>
+                                <span>Listings</span>
+                            </div>
+                        </div>
+                        <div class="nav-group">
+                            <div class="nav-item">
+                                <div class="nav-icon">
+                                    <img src="dashboard/icons/profile.svg" alt="Profile" />
+                                </div>
+                                <span>Users</span>
+                            </div>
+                        </div>
+                        <div class="nav-group">
+                            <div class="nav-item">
+                                <div class="nav-icon">
+                                    <img src="dashboard/icons/article.svg" alt="Article" />
+                                </div>
+                                <span>Request</span>
+                            </div>
+                        </div>
+                        <div class="nav-group">
+                            <div class="nav-item">
+                                <div class="nav-icon">
+                                    <img src="dashboard/icons/scroll.svg" alt="Scroll" />
+                                </div>
+                                <span>Applications</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <div class="search-icon">
+                            <img src="dashboard/icons/search.svg" alt="Search" />
+                        </div>
+                        <input type="text" placeholder="Search listings, users here..." />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Message -->
+            <div class="welcome-section">
+                <h1>Welcome, Ahmed</h1>
             </div>
 
-            <!-- Week 5 -->
-            <div class="week-row">
-                <div class="day-cell current-month">26</div>
-                <div class="day-cell current-month">27</div>
-                <div class="day-cell current-month">28</div>
-                <div class="day-cell current-month">29</div>
-                <div class="day-cell current-month">30</div>
-                <div class="day-cell current-month">31</div>
-                <div class="day-cell next-month">DEC 1</div>
+            <!-- Main Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Chart Section -->
+                <div class="chart-section">
+                    <div class="sales-chart">
+                        <!-- Chart Title -->
+                        <h2 class="chart-title">Sales Overview</h2>
+                        <p class="chart-subtitle">Showing overview Jan 2022 - Sep 2022</p>
+                        
+                        <!-- View Transactions Button -->
+                        <button class="view-transactions-btn">View Transactions</button>
+                        
+                        <!-- Time Filter Buttons -->
+                        <div class="time-filter-group">
+                            <button class="time-filter-btn">1 Week</button>
+                            <button class="time-filter-btn">1 Month</button>
+                            <button class="time-filter-btn active">1 Year</button>
+                        </div>
+                        
+                        <!-- Chart Area -->
+                        <div class="chart-area">
+                            <!-- Y-axis Labels -->
+                            <div class="y-axis-labels">
+                                <span>50m</span>
+                                <span>40m</span>
+                                <span>30m</span>
+                                <span>20m</span>
+                                <span>10m</span>
+                                <span>0</span>
+                            </div>
+                            
+                            <!-- Chart Bars -->
+                            <div class="chart-bars-container">
+                                <!-- Jan - Group 20472: x:86, y:193, 18x99 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 99px;"></div>
+                                    <div class="bar bar-green" style="height: 78px;"></div>
+                                    <div class="bar bar-red" style="height: 30px;"></div>
+                                </div>
+                                <!-- Feb - Group 20473: x:122, y:214, 18x78 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 18px;"></div>
+                                    <div class="bar bar-green" style="height: 78px;"></div>
+                                    <div class="bar bar-red" style="height: 30px;"></div>
+                                </div>
+                                <!-- Mar - Group 20474: x:158, y:250, 18x42 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 42px;"></div>
+                                    <div class="bar bar-green" style="height: 21px;"></div>
+                                    <div class="bar bar-red" style="height: 11px;"></div>
+                                </div>
+                                <!-- Apr - Group 20475: x:194, y:220, 18x72 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 42px;"></div>
+                                    <div class="bar bar-green" style="height: 72px;"></div>
+                                    <div class="bar bar-red" style="height: 30px;"></div>
+                                </div>
+                                <!-- May - Group 20476: x:230, y:262, 18x30 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 30px;"></div>
+                                    <div class="bar bar-green" style="height: 8px;"></div>
+                                    <div class="bar bar-red" style="height: 23px;"></div>
+                                </div>
+                                <!-- Jun - Group 20477: x:266, y:156, 18x136 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 102px;"></div>
+                                    <div class="bar bar-green" style="height: 136px;"></div>
+                                    <div class="bar bar-red" style="height: 23px;"></div>
+                                </div>
+                                <!-- Jul - Group 20478: x:302, y:190, 18x104 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 69px;"></div>
+                                    <div class="bar bar-green" style="height: 104px;"></div>
+                                    <div class="bar bar-red" style="height: 53px;"></div>
+                                </div>
+                                <!-- Aug - Group 20479: x:338, y:225, 18x69 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 69px;"></div>
+                                    <div class="bar bar-green" style="height: 22px;"></div>
+                                    <div class="bar bar-red" style="height: 53px;"></div>
+                                </div>
+                                <!-- Sep - Group 20480: x:374, y:190, 18x104 -->
+                                <div class="bar-group">
+                                    <div class="bar bar-blue" style="height: 104px;"></div>
+                                    <div class="bar bar-green" style="height: 96px;"></div>
+                                    <div class="bar bar-red" style="height: 22px;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Grid Lines -->
+                            <div class="chart-grid-line horizontal"></div>
+                            <div class="chart-grid-line vertical"></div>
+                            
+                            <!-- X-axis Labels -->
+                            <div class="x-axis-labels">
+                                <span>Jan</span>
+                                <span>Feb</span>
+                                <span>Mar</span>
+                                <span>Apr</span>
+                                <span>May</span>
+                                <span>Jun</span>
+                                <span>Jul</span>
+                                <span>Aug</span>
+                                <span>Sep</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Metric Cards positioned exactly per Figma -->
+                        <!-- MRR Card -->
+                        <div class="metric-card mrr-card">
+                            <div class="metric-value">₦50,000,000.00</div>
+                            <div class="metric-details">
+                                <span class="metric-label">MRR</span>
+                                <div class="metric-change">
+                                    <div class="change-icon">
+                                        <img src="dashboard/icons/arrow-up-right.svg" alt="Up arrow" />
+                                    </div>
+                                    <span>2.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Total Inflow Card -->
+                        <div class="metric-card inflow-card">
+                            <div class="metric-value">₦120,000,000.00</div>
+                            <div class="metric-details">
+                                <span class="metric-label">Total Inflow</span>
+                                <div class="metric-change">
+                                    <div class="change-icon">
+                                        <img src="dashboard/icons/arrow-up-right.svg" alt="Up arrow" />
+                                    </div>
+                                    <span>2.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- GMV Card -->
+                        <div class="metric-card gmv-card">
+                            <div class="metric-value">₦100,000,000.00</div>
+                            <div class="metric-details">
+                                <span class="metric-label">GMV</span>
+                                <div class="metric-change">
+                                    <div class="change-icon">
+                                        <img src="dashboard/icons/arrow-down-right.svg" alt="Down arrow" />
+                                    </div>
+                                    <span>0.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Commission Revenue Card -->
+                        <div class="metric-card commission-card">
+                            <div class="metric-value">₦200,000,000.00</div>
+                            <div class="metric-details">
+                                <span class="metric-label">Commission Revenue</span>
+                                <div class="metric-change">
+                                    <div class="change-icon">
+                                        <img src="dashboard/icons/arrow-up-right-teal.svg" alt="Up arrow" />
+                                    </div>
+                                    <span>0.5%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overview Cards -->
+                <div class="overview-section">
+                    <!-- Listings Overview Card -->
+                    <div class="overview-card">
+                        <div class="card-background"></div>
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">
+                                    <img src="dashboard/icons/solar-home.svg" alt="Listings" />
+                                </div>
+                                <span>Listings Overview</span>
+                            </div>
+                            <div class="card-action">
+                                <span>View all</span>
+                                <div class="arrow-icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M6.17 4.23L11.77 9.83L6.17 15.43" stroke="#4545FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stats-container">
+                                <div class="stat-column">
+                                    <div class="stat-label">Total</div>
+                                    <div class="stat-value">1.8k</div>
+                                </div>
+                                <div class="stat-column">
+                                    <div class="stat-label">Active</div>
+                                    <div class="stat-value">80</div>
+                                </div>
+                                <div class="stat-column">
+                                    <div class="stat-label">Archived</div>
+                                    <div class="stat-value">1k</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Users Overview Card -->
+                    <div class="overview-card">
+                        <div class="card-background"></div>
+                        <div class="card-header">
+                            <div class="card-title">
+                                <div class="card-icon">
+                                    <img src="dashboard/icons/vuesax-profile.svg" alt="Users" />
+                                </div>
+                                <span>Users Overview</span>
+                            </div>
+                            <div class="card-action">
+                                <span>View all</span>
+                                <div class="arrow-icon">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path d="M6.17 4.23L11.77 9.83L6.17 15.43" stroke="#4545FE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="stats-container">
+                                <div class="stat-column">
+                                    <div class="stat-label">Total</div>
+                                    <div class="stat-value">20.7k</div>
+                                </div>
+                                <div class="stat-column">
+                                    <div class="stat-label">Riders</div>
+                                    <div class="stat-value">8.5k</div>
+                                </div>
+                                <div class="stat-column">
+                                    <div class="stat-label">Subscribers</div>
+                                    <div class="stat-value">7.5k</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Week 6 -->
-            <div class="week-row">
-                <div class="day-cell next-month">2</div>
-                <div class="day-cell next-month">3</div>
-                <div class="day-cell next-month">4</div>
-                <div class="day-cell next-month">5</div>
-                <div class="day-cell next-month">6</div>
-                <div class="day-cell next-month">7</div>
-                <div class="day-cell next-month">8</div>
+            <!-- Metric Items Row -->
+            <div class="metric-items">
+                <div class="metric-item most-clicked">
+                    <div class="metric-image">
+                        <img src="dashboard/images/most-clicked-bg-15c2c1.jpg" alt="Most Clicked" />
+                        <div class="metric-overlay"></div>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-text">
+                            <div class="metric-type">MOST CLICKED</div>
+                            <div class="metric-title">Urban Prime Plaza Premiere</div>
+                        </div>
+                        <div class="metric-progression">
+                            <div class="dot inactive"></div>
+                            <div class="dot active"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-item most-watchlisted">
+                    <div class="metric-image">
+                        <img src="dashboard/images/most-watchlisted-bg.jpg" alt="Most Watchlisted" />
+                        <div class="metric-overlay"></div>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-text">
+                            <div class="metric-type">MOST WATCHLISTED</div>
+                            <div class="metric-title">Urban Prime Plaza Premiere</div>
+                        </div>
+                        <div class="metric-progression">
+                            <div class="dot inactive"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-item hottest-listing">
+                    <div class="metric-image">
+                        <img src="dashboard/images/hottest-listing-bg.jpg" alt="Hottest Listing" />
+                        <div class="metric-overlay"></div>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-text">
+                            <div class="metric-type">HOTTEST LISTING</div>
+                            <div class="metric-title">Urban Prime Plaza Premiere</div>
+                        </div>
+                        <div class="metric-progression">
+                            <div class="dot inactive"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                            <div class="dot active"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Week 7 -->
-            <div class="week-row">
-                <div class="day-cell next-month">9</div>
-                <div class="day-cell next-month">10</div>
-                <div class="day-cell next-month">11</div>
-                <div class="day-cell next-month">12</div>
-                <div class="day-cell next-month">13</div>
-                <div class="day-cell next-month">14</div>
-                <div class="day-cell next-month">15</div>
+            <!-- Integrated Calendar Component (initially hidden) -->
+            <div class="calendar-widget" id="calendarWidget" style="display: none;">
+                <div class="calendar-container">
+                    <!-- Header -->
+                    <div class="header">
+                        <div class="header-text">
+                            <div class="header-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M19.5 12L5.1 12" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.5 5.97L12.55 12.02L4.5 18.02" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="header-title">Calendar</span>
+                        </div>
+                        <div class="calendar-close" id="calendarClose">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+        
+                    <!-- Month Navigation -->
+                    <div class="month-navigation">
+                        <div class="nav-arrow left-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15.82 19L8.18 11.36L15.82 5" stroke="#98A2B3" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h1 class="month-title">November 2023</h1>
+                        <div class="nav-arrow right-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M8.18 5L15.82 12.64L8.18 19" stroke="#98A2B3" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+        
+                    <!-- Calendar Grid -->
+                    <div class="calendar-grid">
+                        <!-- Week Headers -->
+                        <div class="week-header">
+                            <div class="day-header sun">SUN</div>
+                            <div class="day-header">MON</div>
+                            <div class="day-header">TUE</div>
+                            <div class="day-header">WED</div>
+                            <div class="day-header">THURS</div>
+                            <div class="day-header">FRI</div>
+                            <div class="day-header">SAT</div>
+                        </div>
+        
+                        <!-- Week 1 -->
+                        <div class="week-row">
+                            <div class="day-cell prev-month">29</div>
+                            <div class="day-cell prev-month">30</div>
+                            <div class="day-cell prev-month">31</div>
+                            <div class="day-cell current-month">Nov 1</div>
+                            <div class="day-cell current-month">2</div>
+                            <div class="day-cell current-month">3</div>
+                            <div class="day-cell current-month">4</div>
+                        </div>
+        
+                        <!-- Week 2 -->
+                        <div class="week-row">
+                            <div class="day-cell current-month">5</div>
+                            <div class="day-cell current-month">6</div>
+                            <div class="day-cell current-month">7</div>
+                            <div class="day-cell current-month">8</div>
+                            <div class="day-cell current-month">9</div>
+                            <div class="day-cell current-month">10</div>
+                            <div class="day-cell current-month">11</div>
+                        </div>
+        
+                        <!-- Week 3 -->
+                        <div class="week-row">
+                            <div class="day-cell current-month">12</div>
+                            <div class="day-cell current-month">13</div>
+                            <div class="day-cell current-month">14</div>
+                            <div class="day-cell current-month">15</div>
+                            <div class="day-cell current-month selected">
+                                <div class="day-highlight">16</div>
+                            </div>
+                            <div class="day-cell current-month">17</div>
+                            <div class="day-cell current-month">18</div>
+                        </div>
+        
+                        <!-- Week 4 -->
+                        <div class="week-row">
+                            <div class="day-cell current-month">19</div>
+                            <div class="day-cell current-month">20</div>
+                            <div class="day-cell current-month">21</div>
+                            <div class="day-cell current-month">22</div>
+                            <div class="day-cell current-month">23</div>
+                            <div class="day-cell current-month">24</div>
+                            <div class="day-cell current-month">25</div>
+                        </div>
+        
+                        <!-- Week 5 -->
+                        <div class="week-row">
+                            <div class="day-cell current-month">26</div>
+                            <div class="day-cell current-month">27</div>
+                            <div class="day-cell current-month">28</div>
+                            <div class="day-cell current-month">29</div>
+                            <div class="day-cell current-month">30</div>
+                            <div class="day-cell current-month">31</div>
+                            <div class="day-cell next-month">DEC 1</div>
+                        </div>
+        
+                        <!-- Week 6 -->
+                        <div class="week-row">
+                            <div class="day-cell next-month">2</div>
+                            <div class="day-cell next-month">3</div>
+                            <div class="day-cell next-month">4</div>
+                            <div class="day-cell next-month">5</div>
+                            <div class="day-cell next-month">6</div>
+                            <div class="day-cell next-month">7</div>
+                            <div class="day-cell next-month">8</div>
+                        </div>
+        
+                        <!-- Week 7 -->
+                        <div class="week-row">
+                            <div class="day-cell next-month">9</div>
+                            <div class="day-cell next-month">10</div>
+                            <div class="day-cell next-month">11</div>
+                            <div class="day-cell next-month">12</div>
+                            <div class="day-cell next-month">13</div>
+                            <div class="day-cell next-month">14</div>
+                            <div class="day-cell next-month">15</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Budget Card Modal Overlay (initially hidden) -->
+        <div class="budget-modal-overlay" id="budgetModal" style="display: none;">
+            <div class="budget-card">
+                <!-- Media Section -->
+                <div class="media-section">
+                    <div class="url-motion">
+                        <div class="sketch-container">
+                            <div class="top-bar">
+                                <div class="window-controls">
+                                    <div class="control-button"></div>
+                                    <div class="control-button"></div>
+                                    <div class="control-button"></div>
+                                </div>
+                            </div>
+                            <div class="divider-line"></div>
+                            
+                            <div class="web-search">
+                                <div class="url-bar"></div>
+                                <div class="lock-icon">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 10V8C6 5.79086 7.79086 4 10 4H14C16.2091 4 18 5.79086 18 8V10" stroke="#F1F1F1" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M4 16C4 13.7909 5.79086 12 8 12H16C18.2091 12 20 13.7909 20 16V18C20 20.2091 18.2091 22 16 22H8C5.79086 22 4 20.2091 4 18V16Z" stroke="#F1F1F1" stroke-width="1.5"/>
+                                        <circle cx="12" cy="17" r="1" fill="#F1F1F1"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="card-grid">
+                                <div class="card-row">
+                                    <div class="card">
+                                        <div class="card-pills">
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <div class="card-placeholder">
+                                            <div class="placeholder-lines">
+                                                <div class="line"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-pills">
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <div class="card-placeholder">
+                                            <div class="placeholder-lines">
+                                                <div class="line"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-pills">
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <div class="card-placeholder">
+                                            <div class="placeholder-lines">
+                                                <div class="line"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-row">
+                                    <div class="card">
+                                        <div class="card-pills">
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <div class="card-placeholder">
+                                            <div class="placeholder-lines">
+                                                <div class="line"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-pills">
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <div class="card-placeholder">
+                                            <div class="placeholder-lines">
+                                                <div class="line"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-pills">
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                            <div class="pill"></div>
+                                        </div>
+                                        <div class="card-placeholder">
+                                            <div class="placeholder-lines">
+                                                <div class="line"></div>
+                                                <div class="line"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="overlay"></div>
+                            <div class="calculator-icon">
+                                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M33.3333 73.3327H46.6667C63.3333 73.3327 70 66.666 70 49.9994V29.9994C70 13.3327 63.3333 6.66602 46.6667 6.66602H33.3333C16.6667 6.66602 10 13.3327 10 29.9994V49.9994C10 66.666 16.6667 73.3327 33.3333 73.3327Z" stroke="white" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M55 25.2676V28.6009C55 31.3342 52.7667 33.6009 50 33.6009H30C27.2667 33.6009 25 31.3676 25 28.6009V25.2676C25 22.5342 27.2333 20.2676 30 20.2676H50C52.7667 20.2676 55 22.5009 55 25.2676Z" stroke="white" stroke-width="3.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M27.1204 46.6667H27.1589" stroke="white" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M39.9847 46.6667H40.0232" stroke="white" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M52.846 46.6667H52.8845" stroke="white" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M27.1204 58.3327H27.1589" stroke="white" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M39.9847 58.3327H40.0232" stroke="white" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M52.846 58.3327H52.8845" stroke="white" stroke-width="4.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Text Section -->
+                <div class="text-section">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 6.5H16" stroke="#52525B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6 6.5H2" stroke="#52525B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 10C11.933 10 13.5 8.433 13.5 6.5C13.5 4.567 11.933 3 10 3C8.067 3 6.5 4.567 6.5 6.5C6.5 8.433 8.067 10 10 10Z" stroke="#52525B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 17.5H18" stroke="#52525B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 17.5H2" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14 21C15.933 21 17.5 19.433 17.5 17.5C17.5 15.567 15.933 14 14 14C12.067 14 10.5 15.567 10.5 17.5C10.5 19.433 12.067 21 14 21Z" stroke="#52525B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Set up annual budgets by account category</h3>
+                                <p>Allocate funds across income and expense lines with full visibility.</p>
+                            </div>
+                        </div>
+        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.5 9.5L12.3 13.7L10.7 11.3L7.5 14.5" stroke="#52525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.5 9.5H16.5V11.5" stroke="#52525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#52525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Track actuals vs budget in real time</h3>
+                                <p>See how your community is performing against plan, month by month.</p>
+                            </div>
+                        </div>
+        
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.2598 18.9V7.1C19.2598 5.6 18.6198 5 17.0298 5H15.9898C14.3998 5 13.7598 5.6 13.7598 7.1V18.9" stroke="#52525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5.25977 18.9V12.1C5.25977 10.6 5.89977 10 7.48977 10H8.52977C10.1198 10 10.7598 10.6 10.7598 12.1V18.9" stroke="#52525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 19H22" stroke="#52525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Adjust figures and forecast with ease</h3>
+                                <p>Edit amounts, apply percentage changes, or roll forward last year's data—all in one place.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- CTA Section -->
+                <div class="cta-section">
+                    <button class="create-budget-btn" id="createBudgetBtn">
+                        Create Budget
+                    </button>
+                </div>
             </div>
         </div>
+
     </div>
+
+    <script src="dashboard-debug.js"></script>
 </body>
 </html>

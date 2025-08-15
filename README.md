@@ -1,70 +1,97 @@
-# Calendar Design - Pixel Perfect Implementation
+# Myxellia Dashboard Design
 
-This project is a pixel-perfect implementation of a calendar design from Figma, recreated using HTML and CSS.
+A pixel-perfect, responsive dashboard implementation with integrated calendar and budget components.
 
-## Features
+## 🚀 Live Demo
+- **Main Dashboard**: [index.html](./index.html)
+- **Standalone Calendar**: [calendar-standalone.html](./calendar-standalone.html)
+- **Budget Card Component**: [budget-card.html](./budget-card.html)
 
-- **Exact Figma Reproduction**: Built to match the original Figma design specifications exactly
-- **Responsive Layout**: 400x827px container with proper scrolling behavior
-- **Dark Theme**: Professional dark color scheme matching the design
-- **November 2023 Calendar**: Shows the specific month from the Figma design
-- **Selected Date Highlight**: Day 16 is highlighted with blue accent color
-- **Interactive Elements**: Hover effects for navigation arrows and calendar icon
-- **Previous/Next Month Dates**: Properly styled dates from adjacent months
+## ✨ Features
 
-## Design Specifications
+### Dashboard Components:
+- 📊 **Sales Overview Chart** - Interactive bar charts with time filters
+- 📈 **Metric Cards** - Key performance indicators with trends
+- 🏠 **Overview Cards** - Listings and users statistics
+- 🖼️ **Image-based Metric Items** - Interactive cards with progress indicators
 
-### Colors
-- Background: `#0D0D0D`
-- Header Background: `#171717`
-- Border Color: `#242424`
-- Text Color (Current Month): `#969696`
-- Text Color (Other Months): `rgba(187, 187, 187, 0.6)`
-- Selected Day Background: `#2525E6`
-- White Text: `#FFFFFF`
+### Integrated Components:
+- 🗓️ **Calendar Widget** - Fully functional calendar with smooth animations
+- 💰 **Budget Modal** - Detailed budget planning interface with interactive features
+- 📱 **Responsive Design** - Optimized for all screen sizes
 
-### Typography
-- Primary Font: Inter
-- Header Font: Euclid Circular B (fallback to Inter)
-- Header Font Size: 16px, Weight: 600
-- Day Headers: 7.58px, Weight: 500
-- Calendar Days: 9.94px, Weight: 500
+## 🎨 Design Features
+- **Pixel-perfect implementation** following Figma specifications
+- **Modern typography** with Euclid Circular B font stack
+- **Smooth animations** and hover effects
+- **Interactive elements** with proper feedback
+- **Professional color scheme** and spacing
 
-### Layout
-- Container: 400px × 827px
-- Header: 50px height
-- Calendar Grid: 7 columns × 8 rows (including headers)
-- Each Day Cell: 50px × 91.2px
+## 🛠️ Development
 
-## File Structure
+### Quick Start:
+```bash
+# Clone the repository
+git clone https://github.com/bluefound/Myellexiadesign-.git
+cd Myellexiadesign-
 
-```
-calendar-2/
-├── index.html          # Main HTML structure
-├── style.css          # All CSS styling
-├── assets/            # Downloaded Figma assets
-│   ├── arrow-left.svg
-│   ├── arrow-right.svg
-│   └── calendar-icon-2.svg
-└── README.md          # This documentation
+# Launch dashboard (macOS/Linux)
+./launch-dashboard.sh
+
+# Or use Python server
+python3 serve.py
 ```
 
-## How to View
+### File Structure:
+```
+├── index.html              # Main dashboard (entry point)
+├── dashboard.css           # Complete dashboard styles
+├── dashboard-debug.js      # Interactive functionality
+├── calendar-standalone.html # Standalone calendar component
+├── budget-card.html        # Standalone budget component
+├── dashboard/              # Dashboard assets
+│   ├── icons/             # SVG icons
+│   └── images/            # Background images
+├── assets/                # Additional UI assets
+└── launch-dashboard.sh    # Quick launch script
+```
 
-Simply open `index.html` in any modern web browser. The calendar is designed to display exactly as shown in the Figma design.
+## 📱 Components
 
-## Browser Compatibility
+### Calendar Widget
+- Month navigation with smooth transitions
+- Day selection with visual feedback
+- Responsive grid layout
+- Dark theme with professional styling
 
-- Chrome/Chromium
-- Safari
-- Firefox
-- Edge
+### Budget Modal
+- Interactive browser-like interface
+- Feature highlights with icons
+- Call-to-action button with animations
+- Detailed planning tools showcase
 
-All modern browsers supporting CSS Grid and Flexbox.
+### Metric Cards
+- Image backgrounds with overlay gradients
+- Progress indicators with dots
+- Hover effects and animations
+- Typography optimized for readability
 
-## Original Design
+## 🎯 Technical Implementation
+- **Pure HTML/CSS/JavaScript** - No frameworks required
+- **CSS Grid & Flexbox** for layouts
+- **CSS Custom Properties** for theming
+- **Responsive breakpoints** for mobile optimization
+- **Smooth animations** using CSS transitions and transforms
 
-This implementation is based on the Figma design located at:
-https://www.figma.com/design/pUYktG5jFviKwkUsQgbl5o/Recruitment?node-id=18-914
+## 🚀 Deployment
+This project is optimized for deployment on:
+- Vercel (recommended)
+- Netlify
+- GitHub Pages
+- Any static hosting service
 
-The design has been recreated with pixel-perfect accuracy, including exact positioning, colors, fonts, and spacing as specified in the Figma file.
+The `index.html` serves as the main entry point for deployment platforms.
+
+---
+
+Built with ❤️ for modern web experiences

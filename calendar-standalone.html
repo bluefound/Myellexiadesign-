@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - November 2023</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-text">
+                <div class="header-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M19.5 12L5.1 12" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.5 5.97L12.55 12.02L4.5 18.02" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="header-title">Calendar</span>
+            </div>
+            <div class="calendar-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM5 19V8h14v11H5z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Month Navigation -->
+        <div class="month-navigation">
+            <div class="nav-arrow left-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15.82 19L8.18 11.36L15.82 5" stroke="#98A2B3" stroke-width="2"/>
+                </svg>
+            </div>
+            <h1 class="month-title">November 2023</h1>
+            <div class="nav-arrow right-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M8.18 5L15.82 12.64L8.18 19" stroke="#98A2B3" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="calendar-grid">
+            <!-- Week Headers -->
+            <div class="week-header">
+                <div class="day-header sun">SUN</div>
+                <div class="day-header">MON</div>
+                <div class="day-header">TUE</div>
+                <div class="day-header">WED</div>
+                <div class="day-header">THURS</div>
+                <div class="day-header">FRI</div>
+                <div class="day-header">SAT</div>
+            </div>
+
+            <!-- Week 1 -->
+            <div class="week-row">
+                <div class="day-cell prev-month">29</div>
+                <div class="day-cell prev-month">30</div>
+                <div class="day-cell prev-month">31</div>
+                <div class="day-cell current-month">Nov 1</div>
+                <div class="day-cell current-month">2</div>
+                <div class="day-cell current-month">3</div>
+                <div class="day-cell current-month">4</div>
+            </div>
+
+            <!-- Week 2 -->
+            <div class="week-row">
+                <div class="day-cell current-month">5</div>
+                <div class="day-cell current-month">6</div>
+                <div class="day-cell current-month">7</div>
+                <div class="day-cell current-month">8</div>
+                <div class="day-cell current-month">9</div>
+                <div class="day-cell current-month">10</div>
+                <div class="day-cell current-month">11</div>
+            </div>
+
+            <!-- Week 3 -->
+            <div class="week-row">
+                <div class="day-cell current-month">12</div>
+                <div class="day-cell current-month">13</div>
+                <div class="day-cell current-month">14</div>
+                <div class="day-cell current-month">15</div>
+                <div class="day-cell current-month selected">
+                    <div class="day-highlight">16</div>
+                </div>
+                <div class="day-cell current-month">17</div>
+                <div class="day-cell current-month">18</div>
+            </div>
+
+            <!-- Week 4 -->
+            <div class="week-row">
+                <div class="day-cell current-month">19</div>
+                <div class="day-cell current-month">20</div>
+                <div class="day-cell current-month">21</div>
+                <div class="day-cell current-month">22</div>
+                <div class="day-cell current-month">23</div>
+                <div class="day-cell current-month">24</div>
+                <div class="day-cell current-month">25</div>
+            </div>
+
+            <!-- Week 5 -->
+            <div class="week-row">
+                <div class="day-cell current-month">26</div>
+                <div class="day-cell current-month">27</div>
+                <div class="day-cell current-month">28</div>
+                <div class="day-cell current-month">29</div>
+                <div class="day-cell current-month">30</div>
+                <div class="day-cell current-month">31</div>
+                <div class="day-cell next-month">DEC 1</div>
+            </div>
+
+            <!-- Week 6 -->
+            <div class="week-row">
+                <div class="day-cell next-month">2</div>
+                <div class="day-cell next-month">3</div>
+                <div class="day-cell next-month">4</div>
+                <div class="day-cell next-month">5</div>
+                <div class="day-cell next-month">6</div>
+                <div class="day-cell next-month">7</div>
+                <div class="day-cell next-month">8</div>
+            </div>
+
+            <!-- Week 7 -->
+            <div class="week-row">
+                <div class="day-cell next-month">9</div>
+                <div class="day-cell next-month">10</div>
+                <div class="day-cell next-month">11</div>
+                <div class="day-cell next-month">12</div>
+                <div class="day-cell next-month">13</div>
+                <div class="day-cell next-month">14</div>
+                <div class="day-cell next-month">15</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
