@@ -938,56 +938,6 @@ body {
     height: 325px;
 }
 
-/* Chart Navigation Arrows */
-.chart-nav-arrow {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    z-index: 10;
-}
-
-.chart-nav-arrow:hover {
-    background: #F9FAFB;
-    border-color: #D1D5DB;
-    transform: scale(1.05);
-}
-
-.chart-nav-arrow:active {
-    transform: scale(0.95);
-}
-
-/* Left arrow positioning - positioned at left edge of chart area */
-.chart-nav-left {
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Right arrow positioning - positioned at right edge of chart area */
-.chart-nav-right {
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.chart-nav-arrow svg {
-    width: 20px;
-    height: 20px;
-}
-
-.chart-nav-arrow:hover svg path {
-    stroke: #9CA3AF;
-    transition: stroke 0.2s ease;
-}
-
 /* Y-axis Labels - positioned at x:39, y:146 */
 .y-axis-labels {
     position: absolute;
