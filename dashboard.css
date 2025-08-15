@@ -829,7 +829,8 @@ body {
 
 .sales-chart {
     position: relative;
-    width: 857px;
+    width: 100%;
+    max-width: 857px;
     height: 325px;
     background: #FFFFFF;
     border: 1px solid #E4E4E4;
@@ -869,7 +870,7 @@ body {
 /* View Transactions Button - positioned at x:655, y:20 */
 .view-transactions-btn {
     position: absolute;
-    left: 655px;
+    right: 25px; /* Changed from left: 655px to right positioning for responsiveness */
     top: 20px;
     width: 177px;
     height: 46px;
@@ -895,7 +896,7 @@ body {
 /* Time Filter Group - positioned at x:571, y:83 */
 .time-filter-group {
     position: absolute;
-    left: 571px;
+    right: 25px; /* Changed from left: 571px to right positioning for responsiveness */
     top: 83px;
     display: flex;
     gap: 12px;
@@ -934,7 +935,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 857px;
+    width: 100%;
     height: 325px;
 }
 
@@ -1470,9 +1471,25 @@ body {
 
 
 /* Responsive design */
+/* Large Screens */
+@media (max-width: 1400px) {
+    .header-top, .header-bottom .header-container {
+        padding: 0 40px;
+    }
+    
+    .main-content {
+        padding: 40px;
+    }
+    
+    .metric-card {
+        margin-right: 10px;
+    }
+}
+
+/* Medium Screens (Tablets, Small Laptops) */
 @media (max-width: 1200px) {
     .main-content {
-        padding: 40px 40px;
+        padding: 40px 30px;
     }
     
     .dashboard-content {
@@ -1482,6 +1499,12 @@ body {
     .overview-section {
         flex-direction: row;
         min-width: auto;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .overview-card {
+        width: calc(50% - 10px);
     }
     
     .metric-items {
@@ -1492,46 +1515,436 @@ body {
     .metric-item {
         width: 100%;
         max-width: 500px;
+        margin-bottom: 20px;
+    }
+    
+    /* Chart Adjustments */
+    .view-transactions-btn {
+        right: 20px;
+        top: 20px;
+        width: 150px;
+    }
+    
+    .time-filter-group {
+        right: 20px;
+        top: 75px;
+    }
+    
+    /* Metric Cards - Stack them below the chart */
+    .sales-chart {
+        padding-bottom: 200px;
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .metric-card {
+        position: relative;
+        margin: 8px;
+        width: calc(50% - 16px);
+        display: inline-block;
+        float: left;
+    }
+    
+    .mrr-card {
+        left: 0;
+        top: 350px;
+    }
+    
+    .inflow-card {
+        right: 0;
+        top: 350px;
+        left: auto;
+    }
+    
+    .gmv-card {
+        left: 0;
+        top: 440px;
+    }
+    
+    .commission-card {
+        right: 0;
+        top: 440px;
+        left: auto;
     }
 }
 
-@media (max-width: 768px) {
+/* Tablets */
+@media (max-width: 992px) {
+    .header-top {
+        height: auto;
+        padding: 15px 20px;
+    }
+    
+    .header-bottom {
+        height: auto;
+    }
+    
     .header-container {
-        padding: 0 16px;
+        flex-direction: column;
+        padding: 16px;
+        gap: 15px;
     }
     
-    .navigation {
-        display: none;
-    }
-    
-    .search-bar {
-        width: 200px;
-        margin-right: 16px;
-    }
-    
-    .header-actions {
+    .navigation-options {
+        width: 100%;
+        justify-content: space-between;
         gap: 8px;
     }
     
-    .action-item {
-        width: 40px;
-        height: 40px;
+    .nav-group {
+        width: auto;
+        flex: 1;
     }
     
-    .main-content {
-        padding: 20px 16px;
+    .search-bar {
+        width: 100%;
+        max-width: 400px;
     }
     
+    /* Chart Adjustments */
+    .sales-chart {
+        padding-bottom: 240px;
+        min-height: 550px;
+    }
+    
+    .metric-card {
+        width: calc(100% - 16px);
+        margin: 8px 0;
+        float: none;
+    }
+    
+    .mrr-card { top: 350px; }
+    .inflow-card { top: 440px; }
+    .gmv-card { top: 530px; }
+    .commission-card { top: 620px; }
+    
+    .view-transactions-btn {
+        width: 140px;
+        font-size: 11px;
+    }
+    
+    .time-filter-btn {
+        width: 60px;
+        font-size: 12px;
+    }
+    
+    /* Overview cards */
     .overview-section {
         flex-direction: column;
     }
     
-    .metrics-cards {
-        grid-template-columns: 1fr;
+    .overview-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .header {
+        position: relative;
+        height: auto;
     }
     
-    .metric-items {
-        gap: 16px;
+    .header-top {
+        padding: 12px 15px;
+    }
+    
+    .logo-section {
+        margin-top: 0;
+    }
+    
+    .myxellia-logo img {
+        height: 20px;
+        width: auto;
+    }
+    
+    .header-actions {
+        margin-top: 0;
+        gap: 8px;
+    }
+    
+    .action-items {
+        gap: 8px;
+    }
+    
+    .action-item {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .action-item img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .navigation-options {
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: space-around;
+    }
+    
+    .nav-group {
+        height: 32px;
+        width: calc(50% - 3px);
+        margin-bottom: 6px;
+    }
+    
+    .nav-item span {
+        font-size: 11px;
+    }
+    
+    .main-content {
+        margin-top: 0;
+        padding: 15px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    /* Chart Adjustments */
+    .chart-title {
+        font-size: 16px;
+        left: 15px;
+        top: 15px;
+    }
+    
+    .chart-subtitle {
+        font-size: 10px;
+        left: 15px;
+        top: 40px;
+    }
+    
+    .view-transactions-btn {
+        top: 10px;
+        right: 15px;
+        width: 110px;
+        height: 36px;
+        font-size: 10px;
+    }
+    
+    .time-filter-group {
+        top: 55px;
+        right: 15px;
+        gap: 8px;
+    }
+    
+    .time-filter-btn {
+        width: 45px;
+        height: 26px;
+        font-size: 9px;
+    }
+    
+    .sales-chart {
+        height: auto;
+        padding-bottom: 380px;
+        border-radius: 12px;
+        min-height: 450px;
+    }
+    
+    .chart-area {
+        margin-top: 20px;
+    }
+    
+    .y-axis-labels {
+        left: 15px;
+        top: 120px;
+    }
+    
+    .y-axis-labels span {
+        font-size: 8px;
+    }
+    
+    .x-axis-labels {
+        left: 45px;
+        top: 250px;
+    }
+    
+    .x-axis-labels span {
+        font-size: 8px;
+    }
+    
+    .chart-bars-container {
+        left: 45px;
+        top: 150px;
+        transform: scale(0.8);
+    }
+    
+    /* Metric Cards */
+    .metric-card {
+        height: auto;
+        padding: 12px;
+        margin: 8px 0;
+        position: relative;
+    }
+    
+    .mrr-card { top: 300px; }
+    .inflow-card { top: 380px; }
+    .gmv-card { top: 460px; }
+    .commission-card { top: 540px; }
+    
+    .metric-value {
+        font-size: 14px;
+    }
+    
+    .metric-label {
+        font-size: 9px;
+    }
+    
+    .metric-change {
+        font-size: 9px;
+    }
+    
+    /* Metric items (image cards) */
+    .metric-item {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    
+    .metric-type {
+        font-size: 10px;
+    }
+    
+    .metric-title {
+        font-size: 16px;
+    }
+    
+    /* Calendar Widget */
+    .calendar-widget {
+        width: calc(100vw - 20px);
+        max-width: 350px;
+        right: 10px;
+        top: 50px;
+    }
+    
+    .calendar-widget .calendar-container {
+        width: 100%;
+    }
+    
+    /* Budget Modal */
+    .budget-modal-overlay .budget-card {
+        width: calc(100vw - 40px);
+        max-width: 400px;
+        margin: 20px;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .header-top {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+    
+    .header-actions {
+        margin-top: 0;
+    }
+    
+    .action-item:nth-child(3), 
+    .action-item:nth-child(4) {
+        display: none;
+    }
+    
+    .navigation-options {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+    }
+    
+    .nav-group {
+        flex-shrink: 0;
+        width: auto;
+        min-width: 100px;
+        margin-bottom: 0;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+    
+    .sales-chart {
+        padding-bottom: 420px;
+        min-height: 480px;
+    }
+    
+    .chart-area {
+        margin-top: 30px;
+    }
+    
+    .chart-bars-container {
+        transform: scale(0.7);
+        left: 35px;
+    }
+    
+    .view-transactions-btn {
+        width: 90px;
+        height: 30px;
+        font-size: 8px;
+        right: 10px;
+    }
+    
+    .time-filter-btn {
+        width: 35px;
+        height: 22px;
+        font-size: 8px;
+    }
+    
+    /* Metric Cards positioning for very small screens */
+    .mrr-card { top: 280px; }
+    .inflow-card { top: 340px; }
+    .gmv-card { top: 400px; }
+    .commission-card { top: 460px; }
+    
+    /* Calendar Widget */
+    .calendar-widget {
+        width: calc(100vw - 10px);
+        right: 5px;
+        top: 40px;
+    }
+    
+    .calendar-widget .month-title {
+        font-size: 14px;
+    }
+    
+    .calendar-widget .day-header {
+        font-size: 8px;
+    }
+    
+    .calendar-widget .day-cell {
+        font-size: 10px;
+    }
+    
+    /* Budget Modal */
+    .budget-modal-overlay .budget-card {
+        width: calc(100vw - 20px);
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .budget-modal-overlay .feature-item h3 {
+        font-size: 13px;
+    }
+    
+    .budget-modal-overlay .feature-item p {
+        font-size: 11px;
+    }
+    
+    .budget-modal-overlay .create-budget-btn {
+        height: 40px;
+        font-size: 13px;
     }
 }
 
